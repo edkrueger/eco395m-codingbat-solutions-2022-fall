@@ -8,7 +8,8 @@ def sleep_in(weekday, vacation):
     sleep_in(True, False) → False
     sleep_in(False, True) → True
     """
-    return
+
+    return not weekday or vacation
 
 
 def monkey_trouble(a_smile, b_smile):
@@ -21,7 +22,9 @@ def monkey_trouble(a_smile, b_smile):
     monkey_trouble(False, False) → True
     monkey_trouble(True, False) → False
     """
-    return
+
+    return a_smile == b_smile
+
 
 
 def sum_double(a, b):
@@ -33,7 +36,8 @@ def sum_double(a, b):
     sum_double(3, 2) → 5
     sum_double(2, 2) → 8
     """
-    return
+    
+    return 2 * (a + b) if a == b else a + b
 
 
 def diff21(n):
@@ -45,7 +49,11 @@ def diff21(n):
     diff21(10) → 11
     diff21(21) → 0
     """
-    return
+
+    if n > 21:
+        return 2 * abs(n - 21)
+
+    return abs(n - 21)
 
 
 def parrot_trouble(talking, hour):
