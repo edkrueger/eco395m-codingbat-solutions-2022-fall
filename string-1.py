@@ -33,7 +33,7 @@ def make_tags(tag, word):
     make_tags('i', 'Hello') → '<i>Hello</i>'
     make_tags('cite', 'Yay') → '<cite>Yay</cite>'
     """
-    return
+    return f"<{tag}>{word}</{tag}>"
 
 
 def make_out_word(out, word):
@@ -87,7 +87,7 @@ def first_half(str):
     first_half('HelloThere') → 'Hello'
     first_half('abcdef') → 'abc'
     """
-    return
+    return str[:len(str) // 2]
 
 
 def without_end(str):
